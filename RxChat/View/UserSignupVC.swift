@@ -23,6 +23,7 @@ class UserSignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDelegate = self
         
         setupView()
         bindView()
@@ -74,10 +75,23 @@ class UserSignupVC: UIViewController {
 extension UserSignupVC: UserSignupViewModelViewDelegate {
     func didCompleteUserSignup() {
         SVProgressHUD.dismiss()
+        
+        let alert = UIAlertController(title: "User Signup", message: "Your app account is created. Please login with email and password!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
+            alert.dismiss(animated: true, completion: nil)
+            self?.viewModel?.showUserLoginView()
+        })
+        present(alert, animated: true)
     }
     
     func didUserSignupFail() {
         SVProgressHUD.dismiss()
+        
+        let alert = UIAlertController(title: "User Signup", message: "Sorry, Your app account coundn't be created. Please try again!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        present(alert, animated: true)
     }
 }
 

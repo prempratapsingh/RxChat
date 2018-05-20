@@ -23,8 +23,12 @@ class UserSignupViewModel: NSObject {
     }
     
     func signupUser() {
-        model?.signupUserWith(name: userName!, email: userEmail!, password: password!) { didSignup in 
-            
+        model?.signupUserWith(name: userName!, email: userEmail!, password: password!) { [weak self] didSignup in
+            if didSignup == true {
+                self?.viewDelegate?.didCompleteUserSignup()
+            } else {
+                self?.viewDelegate?.didUserSignupFail()
+            }
         }
     }
 }
