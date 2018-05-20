@@ -18,8 +18,18 @@ class UserModel: NSObject {
         print("UserModel initialized!")
     }
     
-    func loginUserWith(email: String, password: String) {
-        // Call login API
+    func loginUserWith(email: String, password: String, completionHandler: @escaping (_:Bool) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            if error == nil && user != nil {
+                print("User login successful for \(String(describing: Auth.auth().currentUser?.displayName!))")
+                // Saving to local storage
+                UserDefaults.standard.set(true, forKey: UserDefaultKeys.isUserLoggedIn)
+                completionHandler(true)
+            } else {
+                print("Error logging in user!")
+                completionHandler(false)
+            }
+        }
     }
     
     func signupUserWith(name: String, email: String, password: String, completionHandler: @escaping (_:Bool) -> Void) {

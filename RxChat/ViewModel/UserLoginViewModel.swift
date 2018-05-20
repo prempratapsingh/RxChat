@@ -10,12 +10,21 @@ import Foundation
 
 class UserLoginViewModel: NSObject {
     
-    var model: UserModel?
     weak var viewDelegate: UserLoginViewModelViewDelegate?
     weak var coordinatorDelegate: UserLoginViewModelCoordinatorDelegate?
     
-    func loginUserWith(email: String, password: String) {
-        
+    var model: UserModel?
+    var userEmail: String?
+    var userPassword: String?
+    
+    func loginUser() {
+        model?.loginUserWith(email: userEmail!, password: userPassword!) { [weak self] didLogin in
+            if didLogin == true {
+                self?.viewDelegate?.didCompleteUserLogin()
+            } else {
+                self?.viewDelegate?.didUserLoginFail()
+            }
+        }
     }
     
     func showUserSignupView() {

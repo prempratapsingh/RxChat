@@ -39,7 +39,7 @@ class UserSignupVC: UIViewController {
         
         signupButton.layer.cornerRadius = 15
         signupButton.isUserInteractionEnabled = false
-        signupButton.alpha = 0.7
+        signupButton.alpha = 0.6
     }
     
     func bindView() {
@@ -55,7 +55,10 @@ class UserSignupVC: UIViewController {
                         self?.viewModel?.password = password
                         
                         self?.signupButton.isUserInteractionEnabled = true
-                        self?.signupButton.alpha = 0.7
+                        self?.signupButton.alpha = 1.0
+                    } else {
+                        self?.signupButton.isUserInteractionEnabled = false
+                        self?.signupButton.alpha = 0.6
                     }
                 }
         }).subscribe().disposed(by: bag)
