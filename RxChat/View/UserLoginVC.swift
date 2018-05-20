@@ -74,8 +74,9 @@ extension UserLoginVC: UserLoginViewModelViewDelegate {
         SVProgressHUD.dismiss()
         
         let alert = UIAlertController(title: "User Login", message: "Your login is successful!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
             alert.dismiss(animated: true, completion: nil)
+            self?.viewModel?.showUserListView()
         })
         present(alert, animated: true)
     }

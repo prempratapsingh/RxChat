@@ -30,4 +30,8 @@ class UserLoginViewModel: NSObject {
     func showUserSignupView() {
         coordinatorDelegate?.showUserSignupView()
     }
+    
+    func showUserListView() {
+        coordinatorDelegate?.showUserSignupView()
+    }
 }

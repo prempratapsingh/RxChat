@@ -27,6 +27,12 @@
 		C1F2C80720B1DB36009F4A86 /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C80620B1DB36009F4A86 /* UserLoginViewModel.swift */; };
 		C1F2C80920B1DD95009F4A86 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C80820B1DD95009F4A86 /* UserModel.swift */; };
 		C1F2C80B20B1E72A009F4A86 /* UserSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C80A20B1E72A009F4A86 /* UserSignupViewModel.swift */; };
+		C1F2C80D20B2130D009F4A86 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C80C20B2130D009F4A86 /* UserListVC.swift */; };
+		C1F2C80F20B21337009F4A86 /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C80E20B21337009F4A86 /* ChatRoomModel.swift */; };
+		C1F2C81120B21363009F4A86 /* UserListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C81020B21363009F4A86 /* UserListCoordinator.swift */; };
+		C1F2C81320B21421009F4A86 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C81220B21421009F4A86 /* UserListViewModel.swift */; };
+		C1F2C81620B21FF4009F4A86 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C81520B21FF4009F4A86 /* User.swift */; };
+		C1F2C81920B22564009F4A86 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C81820B22564009F4A86 /* UserListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		C1F2C80620B1DB36009F4A86 /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 		C1F2C80820B1DD95009F4A86 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C1F2C80A20B1E72A009F4A86 /* UserSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignupViewModel.swift; sourceTree = "<group>"; };
+		C1F2C80C20B2130D009F4A86 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
+		C1F2C80E20B21337009F4A86 /* ChatRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
+		C1F2C81020B21363009F4A86 /* UserListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCoordinator.swift; sourceTree = "<group>"; };
+		C1F2C81220B21421009F4A86 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		C1F2C81520B21FF4009F4A86 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C1F2C81820B22564009F4A86 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +135,10 @@
 		C1F2C7C920B19383009F4A86 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1F2C81720B22535009F4A86 /* Components */,
 				C1F2C7B820B19363009F4A86 /* UserLoginVC.swift */,
 				C1F2C7EE20B1C00E009F4A86 /* UserSignupVC.swift */,
+				C1F2C80C20B2130D009F4A86 /* UserListVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				C1F2C7F420B1C349009F4A86 /* ApplicationModel.swift */,
+				C1F2C81520B21FF4009F4A86 /* User.swift */,
 				C1F2C80820B1DD95009F4A86 /* UserModel.swift */,
+				C1F2C80E20B21337009F4A86 /* ChatRoomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +160,7 @@
 				C1F2C80320B1DB07009F4A86 /* Protocols */,
 				C1F2C80620B1DB36009F4A86 /* UserLoginViewModel.swift */,
 				C1F2C80A20B1E72A009F4A86 /* UserSignupViewModel.swift */,
+				C1F2C81220B21421009F4A86 /* UserListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +174,7 @@
 				C1F2C7F220B1C1B2009F4A86 /* AppCoordinator.swift */,
 				C1F2C7F920B1C6D2009F4A86 /* UserLoginCoordinator.swift */,
 				C1F2C80120B1D7DF009F4A86 /* UserSignupCoordinator.swift */,
+				C1F2C81020B21363009F4A86 /* UserListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -191,6 +209,14 @@
 				C1F2C80420B1DB1E009F4A86 /* ViewModelProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C1F2C81720B22535009F4A86 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C1F2C81820B22564009F4A86 /* UserListTableViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CF003403B046C92ACBACA2E8 /* Pods */ = {
@@ -326,20 +352,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F2C80720B1DB36009F4A86 /* UserLoginViewModel.swift in Sources */,
+				C1F2C81320B21421009F4A86 /* UserListViewModel.swift in Sources */,
 				C1F2C80520B1DB1E009F4A86 /* ViewModelProtocols.swift in Sources */,
 				C1F2C7F520B1C349009F4A86 /* ApplicationModel.swift in Sources */,
 				C1F2C7FA20B1C6D2009F4A86 /* UserLoginCoordinator.swift in Sources */,
 				C1F2C80B20B1E72A009F4A86 /* UserSignupViewModel.swift in Sources */,
 				C1F2C7F120B1C137009F4A86 /* Coordinator.swift in Sources */,
 				C1F2C80220B1D7DF009F4A86 /* UserSignupCoordinator.swift in Sources */,
+				C1F2C81620B21FF4009F4A86 /* User.swift in Sources */,
 				C1F2C7B920B19363009F4A86 /* UserLoginVC.swift in Sources */,
 				C1F2C80020B1D700009F4A86 /* CoordinatorProtocols.swift in Sources */,
 				C1F2C80920B1DD95009F4A86 /* UserModel.swift in Sources */,
+				C1F2C80F20B21337009F4A86 /* ChatRoomModel.swift in Sources */,
+				C1F2C81920B22564009F4A86 /* UserListTableViewCell.swift in Sources */,
 				C1F2C7F320B1C1B2009F4A86 /* AppCoordinator.swift in Sources */,
 				C1F2C7FC20B1D699009F4A86 /* CoordinatorId.swift in Sources */,
 				C1F2C7B720B19363009F4A86 /* AppDelegate.swift in Sources */,
 				C1F2C7F820B1C3F9009F4A86 /* UserDefaultKeys.swift in Sources */,
+				C1F2C81120B21363009F4A86 /* UserListCoordinator.swift in Sources */,
 				C1F2C7EF20B1C00E009F4A86 /* UserSignupVC.swift in Sources */,
+				C1F2C80D20B2130D009F4A86 /* UserListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

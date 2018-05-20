@@ -26,3 +26,12 @@ protocol UserSignupViewModelViewDelegate: class {
 protocol UserSignupViewModelCoordinatorDelegate: class {
     func showUserLoginView()
 }
+
+protocol UserListViewModelViewDelegate: class {
+    func didUserListLoaded()
+    func didUserListLoadFailed()
+}
+
+protocol UserListViewModelCoordinatorDelegate: class {
+    func showUserListView()
+}

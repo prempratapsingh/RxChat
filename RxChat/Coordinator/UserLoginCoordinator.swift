@@ -36,6 +36,6 @@ extension UserLoginCoordinator: UserLoginViewModelCoordinatorDelegate {
     }
     
     func showUserSignupView() {
-        delegate?.showUserSignupView()
+        delegate?.didCompleteUserLogin()
     }
 }
