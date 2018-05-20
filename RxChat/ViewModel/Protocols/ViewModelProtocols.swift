@@ -30,8 +30,10 @@ protocol UserSignupViewModelCoordinatorDelegate: class {
 protocol UserListViewModelViewDelegate: class {
     func didUserListLoaded()
     func didUserListLoadFailed()
+    func didLogoutSuccessfully()
+    func didLogutFailed()
 }
 
 protocol UserListViewModelCoordinatorDelegate: class {
-    func showUserListView()
+    func showUserLoginView()
 }

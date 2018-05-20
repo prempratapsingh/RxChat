@@ -17,3 +17,7 @@ protocol UserSignupCoordinatorDelegate: class {
     func didCompleteUseSignup()
     func showLogin()
 }
+
+protocol UserListCoordinatorDelegate: class {
+    func showLoginViewAfterLogout()
+}

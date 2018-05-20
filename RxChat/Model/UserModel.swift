@@ -53,4 +53,20 @@ class UserModel: NSObject {
             }
         }
     }
+    
+    func logoutUser(completionHandler: @escaping (_:Bool) -> Void) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                
+                // Saving to local storage
+                UserDefaults.standard.set(false, forKey: UserDefaultKeys.isUserLoggedIn)
+                
+                completionHandler(true)
+                
+            } catch let error as NSError {
+                completionHandler(false)
+            }
+        }
+    }
 }

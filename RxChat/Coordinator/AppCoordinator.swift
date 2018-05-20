@@ -50,6 +50,7 @@ extension AppCoordinator: UserLoginCoordinatorDelegate {
     func showUserListView() {
         let userListCoordinator = UserListCoordinator(withWindow: window)
         coordinators[.usersList] = userListCoordinator
+        userListCoordinator.delegate = self
         userListCoordinator.start()
     }
 }
@@ -62,6 +63,13 @@ extension AppCoordinator: UserSignupCoordinatorDelegate {
     
     func showLogin() {
         coordinators[.userSignup] = nil
+        showUserLoginView()
+    }
+}
+
+extension AppCoordinator: UserListCoordinatorDelegate {
+    func showLoginViewAfterLogout() {
+        coordinators[.usersList] = nil
         showUserLoginView()
     }
 }

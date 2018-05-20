@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import SVProgressHUD
 
 class UserListVC: UIViewController {
 
@@ -40,6 +41,11 @@ class UserListVC: UIViewController {
     
     @IBAction func didClickOnRefreshButton(_ sender: Any) {
         viewModel?.getOnlineUserList()
+    }
+    
+    @IBAction func didClickOnLogoutButton(_ sender: Any) {
+        SVProgressHUD.show()
+        viewModel?.logoutUser()
     }
 }
 
@@ -80,6 +86,27 @@ extension UserListVC: UserListViewModelViewDelegate {
     
     func didUserListLoadFailed() {
         // show error message
+    }
+    
+    func didLogoutSuccessfully() {
+        SVProgressHUD.dismiss()
+        
+        let alert = UIAlertController(title: "User Logout", message: "You successfully logged out!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
+            alert.dismiss(animated: true, completion: nil)
+            self?.viewModel?.showUserLoginView()
+        })
+        present(alert, animated: true)
+    }
+    
+    func didLogutFailed() {
+        SVProgressHUD.dismiss()
+        
+        let alert = UIAlertController(title: "User Logout", message: "Logout failed, please try again!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        present(alert, animated: true)
     }
 }
 

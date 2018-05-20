@@ -18,4 +18,18 @@ class UserListViewModel: NSObject {
     func getOnlineUserList() {
         model?.getOnlineUserList()
     }
+    
+    func logoutUser() {
+        UserModel.sharedInstance.logoutUser { [weak self] didLogOut in 
+            if didLogOut == true {
+                self?.viewDelegate?.didLogoutSuccessfully()
+            } else {
+                self?.viewDelegate?.didLogutFailed()
+            }
+        }
+    }
+    
+    func showUserLoginView() {
+        coordinatorDelegate?.showUserLoginView()
+    }
 }

@@ -11,6 +11,7 @@ import UIKit
 class UserListCoordinator: Coordinator {
     
     var window: UIWindow?
+    weak var delegate: UserListCoordinatorDelegate?
     
     init(withWindow: UIWindow) {
         self.window = withWindow
@@ -30,7 +31,7 @@ class UserListCoordinator: Coordinator {
 }
 
 extension UserListCoordinator: UserListViewModelCoordinatorDelegate {
-    func showUserListView() {
-        
+    func showUserLoginView() {
+        delegate?.showLoginViewAfterLogout()
     }
 }
