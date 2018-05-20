@@ -60,7 +60,6 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserListTableViewCell") as? UserListTableViewCell {
             if let users = viewModel?.model?.onlineUsers.value {
                 let user = users[indexPath.row]
-                let cell = UserListTableViewCell()
                 cell.setupView(user: user)
                 return cell
             }

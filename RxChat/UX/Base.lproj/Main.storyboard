@@ -212,15 +212,15 @@
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgH-bf-bS6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgH-bf-bS6">
                                 <rect key="frame" x="20" y="82" width="335" height="525"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListTableViewCell" rowHeight="50" id="B48-sP-gfk" customClass="UserListTableViewCell" customModule="RxChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListTableViewCell" rowHeight="55" id="B48-sP-gfk" customClass="UserListTableViewCell" customModule="RxChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B48-sP-gfk" id="ZDs-Tv-CtA">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-hg-YT4">
@@ -255,7 +255,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="oBg-hg-YT4" secondAttribute="bottom" id="Lp9-F7-OVO"/>
+                                                <constraint firstAttribute="bottom" secondItem="oBg-hg-YT4" secondAttribute="bottom" constant="5" id="Lp9-F7-OVO"/>
                                                 <constraint firstItem="oBg-hg-YT4" firstAttribute="leading" secondItem="ZDs-Tv-CtA" secondAttribute="leading" id="Udt-Uc-nnK"/>
                                                 <constraint firstAttribute="trailing" secondItem="oBg-hg-YT4" secondAttribute="trailing" id="ddy-ZP-MoO"/>
                                                 <constraint firstItem="oBg-hg-YT4" firstAttribute="top" secondItem="ZDs-Tv-CtA" secondAttribute="top" id="oZf-XF-H1s"/>
