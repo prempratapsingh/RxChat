@@ -33,8 +33,8 @@ class UserModel: NSObject {
                 
                 // Adding user login session to the database
                 let loginDetails = [
-                    "userName" : userName,
-                    "lastLoginTime" : ServerValue.timestamp()
+                    FirebaseDatabaseNodes.userName : userName,
+                    FirebaseDatabaseNodes.lastLoginTime : ServerValue.timestamp()
                 ] as [String:Any]
                 
                 self?.userDatabase.child(FirebaseDatabaseNodes.userLogin).childByAutoId().setValue(loginDetails)
@@ -84,6 +84,24 @@ class UserModel: NSObject {
                 
             } catch let error as NSError {
                 completionHandler(false)
+            }
+        }
+    }
+    
+    func getLoggedinUserList(completionHandler: @escaping (_:[User]) -> Void) {
+        var loggedUsers = [User]()
+        
+        self.userDatabase.child(FirebaseDatabaseNodes.userLogin).queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { [weak self] snapshot in
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots {
+                    if let postData = snap.value as? [String:Any] {
+                        var user = User()
+                        user.name = postData[FirebaseDatabaseNodes.userName] as? String
+                        loggedUsers.append(user)
+                    }
+                }
+                
+                completionHandler(loggedUsers)
             }
         }
     }

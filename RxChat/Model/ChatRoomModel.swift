@@ -15,9 +15,12 @@ class ChatRoomModel: NSObject {
     
     func getOnlineUserList() {
         
-        let user = User()
-        user.name = "New User"
-        
-        onlineUsers.value.append(user)
+        UserModel.sharedInstance.getLoggedinUserList { [weak self] users in
+            self?.onlineUsers.value.removeAll()
+            for user in users {
+               self?.onlineUsers.value.append(user)
+            }
+            
+        }
     }
 }

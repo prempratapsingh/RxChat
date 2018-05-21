@@ -24,6 +24,7 @@ class UserListVC: UIViewController {
         setupView()
         bindView()
         
+        SVProgressHUD.show()
         viewModel?.getOnlineUserList()
     }
     
@@ -35,11 +36,13 @@ class UserListVC: UIViewController {
     private func bindView() {
         viewModel?.model?.onlineUsers.asObservable()
             .subscribe(onNext: { [weak self] value in
+                SVProgressHUD.dismiss()
                 self?.userListTableView.reloadData()
             }).disposed(by: bag)
     }
     
     @IBAction func didClickOnRefreshButton(_ sender: Any) {
+        SVProgressHUD.show()
         viewModel?.getOnlineUserList()
     }
     
