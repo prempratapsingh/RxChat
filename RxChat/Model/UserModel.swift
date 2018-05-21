@@ -9,24 +9,42 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class UserModel: NSObject {
     
     static var sharedInstance = UserModel()
+    var userDatabase = DatabaseReference.init()
     
     override private init() {
-        print("UserModel initialized!")
+        // Initializing user database
+        userDatabase = Database.database().reference()
     }
     
     func loginUserWith(email: String, password: String, completionHandler: @escaping (_:Bool) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
             if error == nil && user != nil {
-                print("User login successful for \(String(describing: Auth.auth().currentUser?.displayName!))")
+                
+                let userName = Auth.auth().currentUser?.displayName ?? user?.user.displayName
+                print("User login successful for \(userName))")
+                
                 // Saving to local storage
                 UserDefaults.standard.set(true, forKey: UserDefaultKeys.isUserLoggedIn)
+                
+                // Adding user login session to the database
+                let loginDetails = [
+                    "userName" : userName,
+                    "lastLoginTime" : ServerValue.timestamp()
+                ] as [String:Any]
+                
+                self?.userDatabase.child(FirebaseDatabaseNodes.userLogin).childByAutoId().setValue(loginDetails)
+                
+                // Reponding back to the view model
                 completionHandler(true)
             } else {
                 print("Error logging in user!")
+                
+                // Reponding back to the view model
                 completionHandler(false)
             }
         }

@@ -8,6 +8,7 @@ target 'RxChat' do
   # Pods for RxChat
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SVProgressHUD'

@@ -32,6 +32,6 @@ class UserLoginViewModel: NSObject {
     }
     
     func showUserListView() {
-        coordinatorDelegate?.showUserSignupView()
+        coordinatorDelegate?.didCompleteUserLogin()
     }
 }
