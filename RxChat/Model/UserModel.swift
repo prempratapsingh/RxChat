@@ -15,6 +15,7 @@ class UserModel: NSObject {
     
     static var sharedInstance = UserModel()
     var userDatabase = DatabaseReference.init()
+    var user: User!
     
     override private init() {
         // Initializing user database
@@ -27,6 +28,9 @@ class UserModel: NSObject {
                 
                 let userName = Auth.auth().currentUser?.displayName ?? user?.user.displayName
                 print("User login successful for \(userName))")
+                self?.user = User()
+                self?.user.name = userName?.lowercased()
+                self?.user.email = email
                 
                 // Saving to local storage
                 UserDefaults.standard.set(true, forKey: UserDefaultKeys.isUserLoggedIn)
@@ -37,7 +41,7 @@ class UserModel: NSObject {
                     FirebaseDatabaseNodes.lastLoginTime : ServerValue.timestamp()
                 ] as [String:Any]
                 
-                self?.userDatabase.child(FirebaseDatabaseNodes.userLogin).childByAutoId().setValue(loginDetails)
+                self?.userDatabase.child(FirebaseDatabaseNodes.userLogin).child(userName!.lowercased()).setValue(loginDetails)
                 
                 // Reponding back to the view model
                 completionHandler(true)
@@ -80,6 +84,11 @@ class UserModel: NSObject {
                 // Saving to local storage
                 UserDefaults.standard.set(false, forKey: UserDefaultKeys.isUserLoggedIn)
                 
+                // Removing user login session from the database
+                if let user = self.user {
+                    let loggedInUser = self.userDatabase.child(FirebaseDatabaseNodes.userLogin).child(self.user.name!)
+                    loggedInUser.removeValue()
+                }
                 completionHandler(true)
                 
             } catch let error as NSError {
