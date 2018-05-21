@@ -98,20 +98,20 @@ class UserModel: NSObject {
     }
     
     func getLoggedinUserList(completionHandler: @escaping (_:[User]) -> Void) {
-        var loggedUsers = [User]()
-        
-        self.userDatabase.child(FirebaseDatabaseNodes.userLogin).queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { [weak self] snapshot in
-            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshots {
-                    if let postData = snap.value as? [String:Any] {
-                        var user = User()
-                        user.name = postData[FirebaseDatabaseNodes.userName] as? String
-                        loggedUsers.append(user)
+        self.userDatabase.child(FirebaseDatabaseNodes.userLogin)
+            .queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { [weak self] snapshot in
+                var loggedUsers = [User]()
+                if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                    for snap in snapshots {
+                        if let postData = snap.value as? [String:Any] {
+                            var user = User()
+                            user.name = postData[FirebaseDatabaseNodes.userName] as? String
+                            loggedUsers.append(user)
+                        }
                     }
+                    
+                    completionHandler(loggedUsers)
                 }
-                
-                completionHandler(loggedUsers)
-            }
         }
     }
 }

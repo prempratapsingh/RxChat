@@ -20,7 +20,6 @@ class ChatRoomModel: NSObject {
             for user in users {
                self?.onlineUsers.value.append(user)
             }
-            
         }
     }
 }
