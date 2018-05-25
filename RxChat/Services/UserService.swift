@@ -100,18 +100,17 @@ class UserService: NSObject {
     func getLoggedinUserList(completionHandler: @escaping ([User]) -> Void) {
         self.userDatabase?.child(FirebaseDatabaseNodes.userLogin)
             .queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { snapshot in
-                var loggedUsers = [User]()
-                if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                    for snap in snapshots {
-                        if let postData = snap.value as? [String:Any] {
-                            let user = User()
-                            user.name = postData[FirebaseDatabaseNodes.userName] as? String
-                            loggedUsers.append(user)
-                        }
+            var loggedUsers = [User]()
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots {
+                    if let postData = snap.value as? [String:Any] {
+                        let user = User()
+                        user.name = postData[FirebaseDatabaseNodes.userName] as? String
+                        loggedUsers.append(user)
                     }
-                    
-                    completionHandler(loggedUsers)
                 }
+            }
+            completionHandler(loggedUsers)
         }
     }
 }

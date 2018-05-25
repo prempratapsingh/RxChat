@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/View/UserListVC.swift"
-            timestampString = "548930649.110571"
+            timestampString = "548933216.411132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.110713"
+            timestampString = "548933216.411239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -57,40 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.1108021"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loginUserWith(email:password:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.11088"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "loginUserWith(email:password:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.110952"
+            timestampString = "548933216.411323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -105,40 +73,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.111024"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "signupUserWith(name:email:password:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.111096"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "signupUserWith(name:email:password:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111167"
+            timestampString = "548933216.411394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -154,7 +90,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.4294519"
+                  timestampString = "548933216.750344"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -169,7 +105,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.431811"
+                  timestampString = "548933216.7542681"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -186,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.11124"
+            timestampString = "548933216.411464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -202,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111308"
+            timestampString = "548933216.4115289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -218,7 +154,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.445143"
+                  timestampString = "548933216.772202"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -233,7 +169,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.447364"
+                  timestampString = "548933216.775625"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -250,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111377"
+            timestampString = "548933216.411593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -266,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.1114531"
+            timestampString = "548933216.411657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -282,7 +218,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.461085"
+                  timestampString = "548933216.7905819"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -297,7 +233,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.464198"
+                  timestampString = "548933216.793957"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -314,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111558"
+            timestampString = "548933216.411718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -330,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111622"
+            timestampString = "548933216.411781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -346,7 +282,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.478888"
+                  timestampString = "548933216.809577"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
@@ -361,7 +297,7 @@
                   moduleName = "RxChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/prempratapsingh/Documents/PROJECTS/iOS/upwork/2018-19/RxChat/RxChat-Git/RxChat/RxChat/Model/UserModel.swift"
-                  timestampString = "548930649.481637"
+                  timestampString = "548933216.812892"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -378,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111684"
+            timestampString = "548933216.4118429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -393,56 +329,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.111744"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "logoutUser(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.111804"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "logoutUser(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.11186"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "getLoggedinUserList(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RxChat/Model/UserModel.swift"
-            timestampString = "548930649.111917"
+            timestampString = "548933216.411906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -458,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.111974"
+            timestampString = "548933216.411971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -474,11 +362,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxChat/Services/UserService.swift"
-            timestampString = "548930649.112043"
+            timestampString = "548933216.412483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
+            landmarkName = "getLoggedinUserList(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxChat/Services/UserService.swift"
+            timestampString = "548933216.4128259"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "getLoggedinUserList(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
