@@ -106,7 +106,7 @@ extension UserListVC: UserListViewModelViewDelegate {
         SVProgressHUD.dismiss()
         
         let alert = UIAlertController(title: "User Logout", message: "Logout failed, please try again!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
             alert.dismiss(animated: true, completion: nil)
         })
         present(alert, animated: true)

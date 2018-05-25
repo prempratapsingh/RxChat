@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C2C914691A6AC5E7FDD0E07 /* Pods_RxChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3636C9576E1B170FC6F333 /* Pods_RxChat.framework */; };
 		C171B83620B2884000E6220E /* FirebaseDatabaseNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171B83520B2884000E6220E /* FirebaseDatabaseNodes.swift */; };
+		C1DCCBB820B7FB18002A9A77 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DCCBB720B7FB18002A9A77 /* UserService.swift */; };
 		C1F2C7B720B19363009F4A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C7B620B19363009F4A86 /* AppDelegate.swift */; };
 		C1F2C7B920B19363009F4A86 /* UserLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F2C7B820B19363009F4A86 /* UserLoginVC.swift */; };
 		C1F2C7BC20B19363009F4A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F2C7BA20B19363009F4A86 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		B3CFBEDAB9003000495A6A70 /* Pods-RxChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxChat/Pods-RxChat.release.xcconfig"; sourceTree = "<group>"; };
 		B702E92DDCA0819D1F2DFAB2 /* Pods-RxChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxChat/Pods-RxChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C171B83520B2884000E6220E /* FirebaseDatabaseNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseNodes.swift; sourceTree = "<group>"; };
+		C1DCCBB720B7FB18002A9A77 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		C1F2C7B320B19363009F4A86 /* RxChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F2C7B620B19363009F4A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1F2C7B820B19363009F4A86 /* UserLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginVC.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C1DCCBB620B7FAEF002A9A77 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1DCCBB720B7FB18002A9A77 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C1F2C7AA20B19363009F4A86 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		C1F2C7B520B19363009F4A86 /* RxChat */ = {
 			isa = PBXGroup;
 			children = (
+				C1DCCBB620B7FAEF002A9A77 /* Services */,
 				C1F2C7F620B1C3E5009F4A86 /* Constants */,
 				C1F2C7CB20B19399009F4A86 /* Model */,
 				C1F2C7C920B19383009F4A86 /* View */,
@@ -363,6 +374,7 @@
 				C1F2C7FA20B1C6D2009F4A86 /* UserLoginCoordinator.swift in Sources */,
 				C171B83620B2884000E6220E /* FirebaseDatabaseNodes.swift in Sources */,
 				C1F2C80B20B1E72A009F4A86 /* UserSignupViewModel.swift in Sources */,
+				C1DCCBB820B7FB18002A9A77 /* UserService.swift in Sources */,
 				C1F2C7F120B1C137009F4A86 /* Coordinator.swift in Sources */,
 				C1F2C80220B1D7DF009F4A86 /* UserSignupCoordinator.swift in Sources */,
 				C1F2C81620B21FF4009F4A86 /* User.swift in Sources */,
