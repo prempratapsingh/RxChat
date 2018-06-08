@@ -28,9 +28,7 @@ class UserService: NSObject {
             if error == nil && user != nil {
                 
                 let userName = Auth.auth().currentUser?.displayName ?? user?.user.displayName
-                self?.user = User()
-                self?.user?.name = userName?.lowercased()
-                self?.user?.email = email
+                self?.user = User(name: userName!.lowercased(), email: email)
                 
                 // Saving to local storage
                 UserDefaults.standard.set(true, forKey: UserDefaultKeys.isUserLoggedIn)
@@ -98,19 +96,27 @@ class UserService: NSObject {
     }
     
     func getLoggedinUserList(completionHandler: @escaping ([User]) -> Void) {
-        self.userDatabase?.child(FirebaseDatabaseNodes.userLogin)
-            .queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { snapshot in
-            var loggedUsers = [User]()
-            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshots {
-                    if let postData = snap.value as? [String:Any] {
-                        let user = User()
-                        user.name = postData[FirebaseDatabaseNodes.userName] as? String
-                        loggedUsers.append(user)
-                    }
-                }
-            }
-            completionHandler(loggedUsers)
-        }
+        //Firebase Database has got some unstability issues
+//        self.userDatabase?.child(FirebaseDatabaseNodes.userLogin)
+//            .queryOrdered(byChild: FirebaseDatabaseNodes.lastLoginTime).observe(.value) { snapshot in
+//            var loggedUsers = [User]()
+//            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+//                for snap in snapshots {
+//                    if let postData = snap.value as? [String:Any] {
+//                        let user = User()
+//                        user.name = postData[FirebaseDatabaseNodes.userName] as? String
+//                        loggedUsers.append(user)
+//                    }
+//                }
+//            }
+//            completionHandler(loggedUsers)
+//        }
+        
+        // Passing in test user list
+        var loggedUsers = [User]()
+        loggedUsers.append(User(name: "John", email: "john@yahoo.com"))
+        loggedUsers.append(User(name: "Michelle", email: "michelle@gmail.com"))
+        loggedUsers.append(User(name: "Adam", email: "adam@msn.com"))
+        completionHandler(loggedUsers)
     }
 }

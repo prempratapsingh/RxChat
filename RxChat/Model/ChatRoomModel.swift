@@ -11,16 +11,13 @@ import RxSwift
 
 class ChatRoomModel: NSObject {
     
-    var onlineUsers = Variable([User]())
+    var onlineUsers = PublishSubject<[User]>()
     
     func getOnlineUserList() {
         
         UserModel.sharedInstance.getLoggedinUserList { [weak self] users in
             if users.count > 0 {
-                self?.onlineUsers.value.removeAll()
-                for user in users {
-                    self?.onlineUsers.value.append(user)
-                }
+                self?.onlineUsers.onNext(users)
             }
         }
     }

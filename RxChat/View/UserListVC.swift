@@ -14,18 +14,19 @@ class UserListVC: UIViewController {
 
     @IBOutlet weak var userListTableView: UITableView!
     
-    let bag = DisposeBag()
-    var viewModel: UserListViewModel?
+    var viewModel = UserListViewModel()
+    
+    private let bag = DisposeBag()
+    fileprivate var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.viewDelegate = self
+        viewModel.viewDelegate = self
+        
         setupView()
         bindView()
-        
-        SVProgressHUD.show()
-        viewModel?.getOnlineUserList()
+        loadUsers()
     }
     
     private func setupView() {
@@ -34,21 +35,27 @@ class UserListVC: UIViewController {
     }
     
     private func bindView() {
-        viewModel?.model?.onlineUsers.asObservable()
-            .subscribe(onNext: { [weak self] value in
+        viewModel.usersObservable
+            .subscribe(onNext: { [weak self] users in
                 SVProgressHUD.dismiss()
+                self?.users = users
                 self?.userListTableView.reloadData()
             }).disposed(by: bag)
     }
     
+    private func loadUsers() {
+        SVProgressHUD.show()
+        viewModel.getOnlineUserList()
+    }
+    
     @IBAction func didClickOnRefreshButton(_ sender: Any) {
         SVProgressHUD.show()
-        viewModel?.getOnlineUserList()
+        viewModel.getOnlineUserList()
     }
     
     @IBAction func didClickOnLogoutButton(_ sender: Any) {
         SVProgressHUD.show()
-        viewModel?.logoutUser()
+        viewModel.logoutUser()
     }
 }
 
@@ -58,20 +65,15 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = viewModel?.model?.onlineUsers.value.count {
-            return count
-        }
-        return 0
+        return self.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserListTableViewCell") as? UserListTableViewCell {
-            if let users = viewModel?.model?.onlineUsers.value {
-                let user = users[indexPath.row]
-                cell.setupView(user: user)
-                return cell
-            }
+            let user = users[indexPath.row]
+            cell.setupView(user: user)
+            return cell
         }
             
        return UITableViewCell()
@@ -97,7 +99,7 @@ extension UserListVC: UserListViewModelViewDelegate {
         let alert = UIAlertController(title: "User Logout", message: "You successfully logged out!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] action in
             alert.dismiss(animated: true, completion: nil)
-            self?.viewModel?.showUserLoginView()
+            self?.viewModel.showUserLoginView()
         })
         present(alert, animated: true)
     }

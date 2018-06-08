@@ -33,6 +33,7 @@ class UserLoginVC: UIViewController {
         emailTextField.returnKeyType = .done
         passwordTextField.delegate = self
         passwordTextField.returnKeyType = .done
+        passwordTextField.isSecureTextEntry = true
         
         loginButton.layer.cornerRadius = 15
         loginButton.isUserInteractionEnabled = false

@@ -7,16 +7,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class UserListViewModel: NSObject {
     
-    var model: ChatRoomModel?
+    var model = ChatRoomModel()
     
     weak var viewDelegate: UserListViewModelViewDelegate?
     weak var coordinatorDelegate: UserListViewModelCoordinatorDelegate?
     
+    var usersObservable: Observable<[User]> {
+        return self.model.onlineUsers.asObservable()
+    }
+    
     func getOnlineUserList() {
-        model?.getOnlineUserList()
+        model.getOnlineUserList()
     }
     
     func logoutUser() {
